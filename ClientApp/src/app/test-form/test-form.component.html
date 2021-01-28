@@ -1,0 +1,65 @@
+<div class="container" style="margin:60px 0;">
+	<form (ngSubmit)="onSubmit()" #testForm="ngForm">
+		<h3>Evaluation Period</h3>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label>Begin Date</label>
+					<input type="text" class="form-control" id="evalPeriodBeginDate" [(ngModel)]="model.evalPeriodBeginDate" name="evalPeriodBeginDate" #evalPeriodBeginDate="ngModel" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label>End Date</label>
+					<input type="text" class="form-control" id="evalPeriodEndDate" [(ngModel)]="model.evalPeriodEndDate" name="evalPeriodEndDate" #evalPeriodEndDate="ngModel" />
+				</div>
+			</div>
+		</div>
+		<h3>Unit Capacity Record</h3>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label>Begin Date</label>
+					<input type="text" class="form-control" id="beginDate" [(ngModel)]="model.beginDate" name="begindate" #beginDate="ngModel" />
+				</div>
+				<div class="form-group">
+					<label>End Date</label>
+					<input type="text" class="form-control" id="endDate" [(ngModel)]="model.endDate" name="endDate" #endDate="ngModel" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label>Evaluation Begin Date</label>
+					<input type="text" class="form-control" id="evalBeginDate" [(ngModel)]="model.evalBeginDate" name="evalBegindate" #evalBegindate="ngModel" />
+				</div>
+				<div class="form-group">
+					<label>Evaluation End Date</label>
+					<input type="text" class="form-control" id="evalEndDate" [(ngModel)]="model.evalEndDate" name="evalEndDate" #evalEndDate="ngModel" />
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label>Maximum Hourly Heat Input Capacity </label>
+					<input type="number" class="form-control" id="maxHrlyHeatInputCapacity" [(ngModel)]="model.maxHrlyHeatInputCapacity" name="maxHrlyHeatInputCapacity" #maxHrlyHeatInputCapacity="ngModel" />
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="form-group">
+					<label><input type="checkbox" class="" id="active" [(ngModel)]="model.active" name="active" #active="ngModel" /> Active</label>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="form-group">
+					<label><input type="checkbox" class="" id="datesValid" [(ngModel)]="model.datesValid" name="datesValid" #datesValid="ngModel" /> Dates Valid</label>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="form-group">
+					<label><input type="checkbox" class="" id="datesConsistent" [(ngModel)]="model.datesConsistent" name="datesConsistent" #datesConsistent="ngModel" /> Dates Consistent</label>
+				</div>
+			</div>
+		</div>
+
+		<button type="submit" class="btn btn-success">Evaluate</button>
+	</form>
+</div>

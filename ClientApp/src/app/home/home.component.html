@@ -1,0 +1,12 @@
+<app-test-form (onEvaluate)="model=evaluate($event)" [model]="evalRequest"></app-test-form>
+
+<div *ngIf="evaluating">
+	<mat-spinner [color]="green"></mat-spinner>
+</div>
+
+<div *ngIf="results != null && results.length > 0">
+	<div>Evaluation Results:</div>
+	<div class="row" *ngFor="let result of results">
+		{{result}}
+	</div>
+</div>
